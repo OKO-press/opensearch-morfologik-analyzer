@@ -1,0 +1,16 @@
+"Analyze Sample Text":
+  - do:
+      indices.analyze:
+        body:
+          text: "czerwoną"
+          analyzer: morfologik
+  - length: { tokens: 2 }
+  - match:  { tokens.0.token: czerwona }
+  - match:  { tokens.0.start_offset: 0 }
+  - match:  { tokens.0.end_offset: 8 }
+  - match: { tokens.1.token: czerwony }
+  - match: { tokens.1.start_offset: 0 }
+  - match: { tokens.1.end_offset: 8 }
+
+
+
