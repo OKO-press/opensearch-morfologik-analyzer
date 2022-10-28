@@ -67,6 +67,8 @@ buildscript {
     }
 }
 
+version = opensearch_version - "-SNAPSHOT" + ".0"
+
 dependencies {
     implementation(group: 'org.apache.lucene', name: 'lucene-analysis-morfologik', version: '9.1.0') {
         exclude group: 'ua.net.nlp'
@@ -121,3 +123,4 @@ task updateVersion {
         ant.replaceregexp(file:'build.gradle', match: '"opensearch.version", "\\d.*"', replace: '"opensearch.version", "' + newVersion.tokenize('-')[0] + '-SNAPSHOT"', flags:'g', byline:true)
     }
 }
+
