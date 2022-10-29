@@ -1,2 +1,5 @@
+OKO.press Team (https://oko.press)
+Copyright OKO.press Team
+
 OpenSearch (https://opensearch.org/)
 Copyright OpenSearch Contributors
